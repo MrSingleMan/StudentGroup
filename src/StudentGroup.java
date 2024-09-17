@@ -18,6 +18,9 @@ public class StudentGroup implements Iterable<Student> {
         return studentList;
     }
 
+    public void createStudent(String firstName, String lastName, String middleName) {
+        studentList.add(new Student(firstName, lastName, middleName));
+    }
     public void setStudentList(List<Student> studentList) {
         this.studentList = studentList;
     }

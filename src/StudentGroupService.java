@@ -25,7 +25,12 @@ public class StudentGroupService {
 
     public List<Student> getSortedStudentByFIO() {
         List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
-        studentList.sort(new StudentComparator());
+        studentList.sort(new UserComparator<Student>());
         return studentList;
     }
+
+    public void createStudent(String firstName, String lastName, String middleName){
+        studentGroup.createStudent(firstName, lastName, middleName);
+    }
 }
+
